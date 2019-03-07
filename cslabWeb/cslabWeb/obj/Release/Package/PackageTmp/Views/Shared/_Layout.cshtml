@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">   
+    <!-- Bootstrap core CSS -->
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-nav navbar-expand-lg navbar-dark fixed-top" style="background-color: #000033; height:50px">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" style="color:#808080; font-size:small;"><i class="fa fa-phone"></i>  +90 (264) 295 69 79 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:#808080; font-size:small;"><i class="fa fa-map-marker" aria-hidden="true"></i>  Bilgisayar ve Bilişim Bilimleri Fakültesi Haşim Gürdamar Binası 54187 Serdivan / SAKARYA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:#808080; font-size:small"><i class="fa fa-envelope-open"></i>  bf@sakarya.edu.tr</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--------------------------------->
+    <!--Navbar Brand-->
+    <div class="rd-navbar-brand" style="padding:1%">
+        <a class="reveal-inline-block" href="~/Home/Index">
+            <div class="unit unit-xs-middle unit-xl unit-xl-horizontal unit-spacing-xxs">
+                <div class="unit-body" style="text-align:center">
+                    <img width="106" height="116" src="~/images/saulogo.png" alt="">
+                </div>
+            </div>
+        </a>
+    </div>
+    <div style="text-align:center; font-family:merriweather; color:#081d83; font-size:25px"> <h5><b>Bilgisayar ve Bilişim Bilimleri Fakültesi-Bilgisayar Laboratuvarları </b> </h5></div>
+
+    <nav class="navbar navbar-nav navbar-expand-lg" style="background-color:#ffffff; z-index:100; height:50px;">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right navbar-light" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text ml-auto" style="font-family: merriweather;background-color: #ffffff; font-size: 13pt; font-weight: 600; margin:auto;">
+                    <li class="nav-item ">
+                        <a class="nav-link color_on_hover" @Html.ActionLink("Anasayfa", "Index", "Home")</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color_on_hover" @Html.ActionLink("Kişiler", "Users", "Home")</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle color_on_hover" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Laboratuvar
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item color_on_hover" href="portfolio-1-col.html">1001 Lab</a>
+                            <a class="dropdown-item color_on_hover" href="portfolio-2-col.html">1003 Lab</a>
+                            <a class="dropdown-item color_on_hover" href="portfolio-item.html">1101 Lab</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle color_on_hover" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bağlantılar
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item color_on_hover" href="http://www.sakarya.edu.tr/">Saü</a>
+                            <a class="dropdown-item color_on_hover" href="http://bf.sakarya.edu.tr/">Saü Bf</a>
+                            <a class="dropdown-item color_on_hover" href="http://cs.sakarya.edu.tr/">Saü Cs</a>
+                            <a class="dropdown-item color_on_hover" href="http://bsm.sakarya.edu.tr/tr">Saü Bsm</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color_on_hover" @Html.ActionLink("İletişim", "Contact", "Home")</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br />
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <!-- Footer -->
+
+    </div>
+    <footer class="py-2" style="background-color: #000033;">
+        <div class="container">
+            <p class="m-0 text-center " style="color:#808080; font-size:small;">Copyright 2019 &copy; Bilgisayar ve Bilişim Bilimleri Fakültesi</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Scripts/jqBootstrapValidation.js"></script>
+    <script src="~/Scripts/contact_me.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Scripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

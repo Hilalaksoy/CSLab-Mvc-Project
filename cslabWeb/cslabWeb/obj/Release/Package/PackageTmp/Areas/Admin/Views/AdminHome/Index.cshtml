@@ -1,0 +1,17 @@
+﻿
+@model  List<cslabWeb.Areas.Admin.Models.Log>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+<br />
+<div>
+     Id=@Model[0].Id
+     kullanıcı adı=@Model[0].Username
+     Bilgisayar adı =@Model[0].Macaddress
+     Durum=@Model[0].Status
+     Tarih=@Model[0].Datetime
+    <br />
+</div>
