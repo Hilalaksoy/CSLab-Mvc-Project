@@ -1,2 +1,2 @@
 # CSLab-Mvc-Project
-Computer science laboratory presentation site 
+Computer science laboratory presentation website 
