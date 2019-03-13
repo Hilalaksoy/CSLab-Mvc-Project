@@ -13,11 +13,9 @@ namespace cslabWeb.Areas.Admin.Controllers
         // GET: Admin/Home
         public ActionResult Index()
         {
-            using (AdminContext db = new AdminContext())
-            {
-                return View(db.admins.ToList());
-            }       
-            
+            AdminContext db = new AdminContext();
+            List<Log> asd = db.logs.ToList();
+            return View(asd);
         }
         public ActionResult Login()
         {
@@ -28,7 +26,7 @@ namespace cslabWeb.Areas.Admin.Controllers
         {
             using (AdminContext db = new AdminContext())
             {
-                var adm = db.admins.SingleOrDefault(u => u.Username == admin.Username && u.Password == admin.Password);
+                var adm = db.admins.Single(u => u.Username == admin.Username && u.Password == admin.Password);
                 if(adm != null)
                 {
                     Session["Id"] = adm.Id.ToString();
@@ -44,15 +42,14 @@ namespace cslabWeb.Areas.Admin.Controllers
         }
         public ActionResult LoggedIn()
         {
-            if(Session["Id"] != null)
+            if(Session["UserId"] != null)
             {
-                return RedirectToAction("Index");
+                return View();
             }
             else
             {
                 return RedirectToAction("Login");
             }
         }
-
     }
 }

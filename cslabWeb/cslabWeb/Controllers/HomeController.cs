@@ -22,18 +22,5 @@ namespace cslabWeb.Controllers
         {
             return View();
         }
-
-        public  ActionResult Lab1001()
-        {
-            return View();
-        }
-        public ActionResult Lab1003()
-        {
-            return View();
-        }
-        public ActionResult Lab1101()
-        {
-            return View();
-        }
     }
 }
