@@ -1,5 +1,5 @@
 ﻿
-@model  List<cslabWeb.Areas.Admin.Models.Log>
+@model  IEnumerable<cslabWeb.Areas.Admin.Models.AdminCs>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
@@ -8,10 +8,31 @@
 <h2>Index</h2>
 <br />
 <div>
-     Id=@Model[0].Id
+     @*Id=@Model[0].Id
      kullanıcı adı=@Model[0].Username
      Bilgisayar adı =@Model[0].Macaddress
      Durum=@Model[0].Status
-     Tarih=@Model[0].Datetime
+     Tarih=@Model[0].Datetime*@
     <br />
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Username)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Password)
+            </td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+            </tr>
+        }
+    </table>
 </div>
