@@ -1256,6 +1256,7 @@
     </Content>
     <Content Include="Areas\Admin\Views\AdminHome\Login.cshtml" />
     <Content Include="Areas\Admin\Views\AdminHome\LoggedIn.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\Create.cshtml" />
     <None Include="Connected Services\ServiceReference3\UserAuthentication.disco" />
     <None Include="Connected Services\ServiceReference3\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference3\configuration.svcinfo" />
